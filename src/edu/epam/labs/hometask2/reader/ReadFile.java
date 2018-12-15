@@ -1,7 +1,5 @@
 package edu.epam.labs.hometask2.reader;
 
-import edu.epam.labs.hometask2.exception.NoFile;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,25 +7,24 @@ import java.io.IOException;
 
 public class ReadFile {
 
-    public void ArrayCreation(){
+    public String [] read (String fileName) {
+        String [] arrayOfStrings;
         try {
-            BufferedReader fileReader = new BufferedReader(
-                    new FileReader(
-                            "C:\\Users\\Georgy\\IdeaProjects\\EpamLearning\\TextFileData\\SourceDataForArray"));
-
-            StringBuilder sb = new StringBuilder();
-            while (fileReader.ready()){
-                sb.append(fileReader.read());
-            }
-
-
-
+            BufferedReader fileReader = new BufferedReader(new FileReader(fileName));
+            String line = fileReader.readLine();
+            arrayOfStrings = line.split("\\s+");
+            fileReader.close();
+            return arrayOfStrings;
 
         } catch (FileNotFoundException e){
-            new NoFile().printMessage();
+            System.out.println("File not found!");
         } catch (IOException exception){
             exception.printStackTrace();
         }
+        return null;
+    }
+
+    public void createArray () {
 
     }
 }

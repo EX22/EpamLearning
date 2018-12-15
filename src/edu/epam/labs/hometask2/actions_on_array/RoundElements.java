@@ -1,10 +1,10 @@
-package edu.epam.labs.hometask2.round;
+package edu.epam.labs.hometask2.actions_on_array;
 
 // Округление элементов массива
 
 public class RoundElements {
 
-    public void rounding (double [] arr){
+    public void round (double [] arr){
         for (int i = 0; i < arr.length; i++){
            arr[i] = Math.round(arr[i]);
         }

@@ -1,4 +1,4 @@
-package edu.epam.labs.hometask2.search;
+package edu.epam.labs.hometask2.actions_on_array;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class BinarySearch {
 
-    public int findElement(double[] arr, double x) {
+    public int find(double[] arr, double x) {
         Arrays.sort(arr);
         int index = -1;
         int low = 0;

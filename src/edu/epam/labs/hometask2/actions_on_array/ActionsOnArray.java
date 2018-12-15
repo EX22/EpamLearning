@@ -1,4 +1,4 @@
-package edu.epam.labs.hometask2.shuffle;
+package edu.epam.labs.hometask2.actions_on_array;
 
 /* Действия над массивом.
 * Обмен местами элементов массива если длинна элемента в двоичном представлении
@@ -8,10 +8,10 @@ package edu.epam.labs.hometask2.shuffle;
 
 public class ActionsOnArray {
 
-    public void toBinaryOrSquare(double [] arr){
+    public void swapOrSquare(double [] arr){
         double tempElem;
         for (int i = 0; i < arr.length - 1; i++){
-            if (toBinary(arr[i]) > toBinary(arr[i+1])){
+            if (getBinaryLength(arr[i]) > getBinaryLength(arr[i+1])){
                 tempElem = arr[i];
                 arr[i] = arr[i+1];
                 arr[i+1] = tempElem;
@@ -21,7 +21,7 @@ public class ActionsOnArray {
         }
     }
 
-    private int toBinary(double d){
+    private int getBinaryLength(double d){
         int a = (int)d;
         int b;
         int length = 0;
