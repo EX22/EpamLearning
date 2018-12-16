@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EpamLearning.iml" filepath="$PROJECT_DIR$/EpamLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeTask2/HomeTask2.iml" filepath="$PROJECT_DIR$/HomeTask2/HomeTask2.iml" />
     </modules>
   </component>
 </project>
