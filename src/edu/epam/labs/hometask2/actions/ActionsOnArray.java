@@ -1,4 +1,4 @@
-package edu.epam.labs.hometask2.actions_on_array;
+package edu.epam.labs.hometask2.actions;
 
 /* Действия над массивом.
 * Обмен местами элементов массива если длинна элемента в двоичном представлении

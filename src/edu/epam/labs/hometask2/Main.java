@@ -1,8 +1,8 @@
 package edu.epam.labs.hometask2;
 
-import edu.epam.labs.hometask2.actions_on_array.ActionsOnArray;
-import edu.epam.labs.hometask2.actions_on_array.BinarySearch;
-import edu.epam.labs.hometask2.actions_on_array.RoundElements;
+import edu.epam.labs.hometask2.actions.ActionsOnArray;
+import edu.epam.labs.hometask2.actions.BinarySearch;
+import edu.epam.labs.hometask2.actions.RoundElements;
 import edu.epam.labs.hometask2.exception.ValidationException;
 import edu.epam.labs.hometask2.reader.ReadFile;
 import edu.epam.labs.hometask2.validator.ValidateIncomeData;
@@ -32,7 +32,7 @@ public class Main {
             try {
                 reader.close();
             } catch (IOException exception) {
-                new ValidationException().printMessage();
+               exception.printStackTrace();
             }
         }
 

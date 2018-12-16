@@ -23,8 +23,4 @@ public class ReadFile {
         }
         return null;
     }
-
-    public void createArray () {
-
-    }
 }
