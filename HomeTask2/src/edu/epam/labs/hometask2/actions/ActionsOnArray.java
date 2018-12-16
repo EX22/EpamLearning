@@ -21,7 +21,7 @@ public class ActionsOnArray {
         }
     }
 
-    private int getBinaryLength(double d) {
+    public int getBinaryLength(double d) {
         int a = (int) d;
         int b;
         int length = 0;
