@@ -22,17 +22,19 @@ public class Main {
         ValidateIncomeData validateIncomeData = new ValidateIncomeData();
         double[] array = validateIncomeData.validateArray(readFile.read(
                 "C:\\Users\\Georgy\\IdeaProjects\\EpamLearning\\SourceDataForArray"));
+
+
         try {
             System.out.println("Enter the element you want to find: ");
             x = Double.parseDouble(reader.readLine());
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Input data exception occurred: " + e);
         } finally {
             try {
                 reader.close();
             } catch (IOException exception) {
-               exception.printStackTrace();
+                System.out.println("During closing the reader exception occurred: " + exception);
             }
         }
 

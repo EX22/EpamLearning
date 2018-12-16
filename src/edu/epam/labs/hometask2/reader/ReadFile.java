@@ -7,8 +7,8 @@ import java.io.IOException;
 
 public class ReadFile {
 
-    public String [] read (String fileName) {
-        String [] arrayOfStrings;
+    public String[] read(String fileName) {
+        String[] arrayOfStrings;
         try {
             BufferedReader fileReader = new BufferedReader(new FileReader(fileName));
             String line = fileReader.readLine();
@@ -16,10 +16,10 @@ public class ReadFile {
             fileReader.close();
             return arrayOfStrings;
 
-        } catch (FileNotFoundException e){
-            System.out.println("File not found!");
-        } catch (IOException exception){
-            exception.printStackTrace();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!" + e);
+        } catch (IOException exception) {
+            System.out.println("During the file reading an exception occurred: " + exception);
         }
         return null;
     }

@@ -4,9 +4,9 @@ package edu.epam.labs.hometask2.actions;
 
 public class RoundElements {
 
-    public void round (double [] arr){
-        for (int i = 0; i < arr.length; i++){
-           arr[i] = Math.round(arr[i]);
+    public void round(double[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Math.round(arr[i]);
         }
     }
 }
