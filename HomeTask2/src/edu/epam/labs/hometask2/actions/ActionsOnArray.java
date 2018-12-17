@@ -1,13 +1,15 @@
 package edu.epam.labs.hometask2.actions;
 
-/* Действия над массивом.
- * Обмен местами элементов массива если длинна элемента в двоичном представлении
- * больше длинны следующего элемента в двоичном представлении,
- * иначе возведение в квадрат текущего элемента.
+/**
+ * Actions on array such as swapping elements or getting to square.
  */
-
 public class ActionsOnArray {
 
+    /**
+     * Having gotten array of doubles swap element with the next one if the next one's element's length in binary
+     * system longer and square if not.
+     * @param arr array of doubles.
+     */
     public void swapOrSquare(double[] arr) {
         double tempElem;
         for (int i = 0; i < arr.length - 1; i++) {
@@ -21,6 +23,11 @@ public class ActionsOnArray {
         }
     }
 
+    /**
+     * Convert decimal to binary and find the length of particular number in binary system.
+     * @param d double digit. Should contain already rounded number.
+     * @return integer number equals the length of decimal d in binary system.
+     */
     public int getBinaryLength(double d) {
         int a = (int) d;
         int b;

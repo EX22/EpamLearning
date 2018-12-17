@@ -4,10 +4,17 @@ import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Read file from given resource.
+ */
 public class ReadFile {
 
     private static Logger LOG = Logger.getLogger(ReadFile.class.getName());
 
+    /**
+     * @param inputStream
+     * @return
+     */
     public String[] read(InputStream inputStream) {
         String[] arrayOfStrings = null;
         try {
