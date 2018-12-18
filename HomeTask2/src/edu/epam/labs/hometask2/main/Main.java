@@ -1,11 +1,10 @@
-package edu.epam.labs.hometask2;
+package edu.epam.labs.hometask2.main;
 
-import edu.epam.labs.hometask2.actions.ActionsOnArray;
-import edu.epam.labs.hometask2.actions.BinarySearch;
-import edu.epam.labs.hometask2.actions.RoundElements;
+import edu.epam.labs.hometask2.action.ActionsOnArray;
+import edu.epam.labs.hometask2.action.BinarySearch;
 import edu.epam.labs.hometask2.exception.ValidationException;
-import edu.epam.labs.hometask2.reader.ReadFile;
-import edu.epam.labs.hometask2.validator.ValidateIncomingData;
+import edu.epam.labs.hometask2.reader.Reader;
+import edu.epam.labs.hometask2.validator.DataValidator;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,12 +22,12 @@ public class Main {
         double x;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        ReadFile readFile = new ReadFile();
-        ValidateIncomingData validateIncomingData = new ValidateIncomingData();
+        Reader readFile = new Reader();
+        DataValidator dataValidator = new DataValidator();
         try {
             InputStream in = Main.class.getResourceAsStream(
-                    "/edu/epam/labs/hometask2/resources/SourceDataForArray");
-            double[] array = validateIncomingData.validateArray(readFile.read(in));
+                    "/resources/SourceDataForArray");
+            double[] array = dataValidator.validateArray(readFile.read(in));
 
 
             System.out.println("Enter the element you want to find: ");
@@ -42,14 +41,13 @@ public class Main {
                 System.out.println("Requested element is not found.");
             }
 
-            RoundElements roundElements = new RoundElements();
-            roundElements.round(array);
+            ActionsOnArray actionsOnArray = new ActionsOnArray();
+            actionsOnArray.round(array);
 
             for (double d : array) {
                 System.out.println(d);
             }
 
-            ActionsOnArray actionsOnArray = new ActionsOnArray();
             actionsOnArray.swapOrSquare(array);
 
             System.out.println("Swapped or Squared");

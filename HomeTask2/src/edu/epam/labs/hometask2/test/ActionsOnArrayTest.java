@@ -1,6 +1,6 @@
-package edu.epam.labs.hometask2.tests;
+package edu.epam.labs.hometask2.test;
 
-import edu.epam.labs.hometask2.actions.ActionsOnArray;
+import edu.epam.labs.hometask2.action.ActionsOnArray;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;

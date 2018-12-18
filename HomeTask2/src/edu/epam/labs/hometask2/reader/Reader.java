@@ -7,13 +7,13 @@ import java.util.logging.Logger;
 /**
  * Read file from given resource.
  */
-public class ReadFile {
+public class Reader {
 
-    private static Logger LOG = Logger.getLogger(ReadFile.class.getName());
+    private static Logger LOG = Logger.getLogger(Reader.class.getName());
 
     /**
      * @param inputStream
-     * @return
+     * @return array of strings.
      */
     public String[] read(InputStream inputStream) {
         String[] arrayOfStrings = null;
@@ -24,13 +24,13 @@ public class ReadFile {
                 arrayOfStrings = line.split("\\s+");
             }
             fileReader.close();
-            return arrayOfStrings;
+
 
         } catch (FileNotFoundException e) {
             LOG.log(Level.SEVERE, "The source for array is not found! ", e);
         } catch (IOException e) {
             LOG.log(Level.SEVERE, "During the source for array reading an exception occurred: ", e);
         }
-        return null;
+        return arrayOfStrings;
     }
 }

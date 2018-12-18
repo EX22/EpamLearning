@@ -6,9 +6,9 @@ import java.util.regex.Pattern;
 
 
 /**
- *
+ * Check incoming data, skip not valid elements.
  */
-public class ValidateIncomingData {
+public class DataValidator {
     /**
      *
      * @param strings array of strings. Should contain elements which might be converted into double. For example "7.0".

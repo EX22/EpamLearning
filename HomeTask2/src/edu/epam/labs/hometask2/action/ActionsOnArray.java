@@ -1,4 +1,4 @@
-package edu.epam.labs.hometask2.actions;
+package edu.epam.labs.hometask2.action;
 
 /**
  * Actions on array such as swapping elements or getting to square.
@@ -40,6 +40,16 @@ public class ActionsOnArray {
             length++;
         }
         return length;
+    }
+
+    /**
+     * Round array's elements.
+     * @param arr array of doubles.
+     */
+    public void round(double[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Math.round(arr[i]);
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-package edu.epam.labs.hometask2.actions;
+package edu.epam.labs.hometask2.action;
 
 import java.util.Arrays;
 
