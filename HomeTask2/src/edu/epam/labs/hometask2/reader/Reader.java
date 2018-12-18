@@ -12,7 +12,7 @@ public class Reader {
     private static Logger LOG = Logger.getLogger(Reader.class.getName());
 
     /**
-     * @param inputStream
+     * @param inputStream input stream to read data from.
      * @return array of strings.
      */
     public String[] read(InputStream inputStream) {
