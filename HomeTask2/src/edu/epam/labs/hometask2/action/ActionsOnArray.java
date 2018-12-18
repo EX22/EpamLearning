@@ -1,7 +1,7 @@
 package edu.epam.labs.hometask2.action;
 
 /**
- * Actions on array such as swapping elements or getting to square.
+ * Makes actions on array such as swapping elements, getting to square or rounds elements
  */
 public class ActionsOnArray {
 
@@ -24,7 +24,7 @@ public class ActionsOnArray {
     }
 
     /**
-     * Convert decimal to binary and find the length of particular number in binary system.
+     * Converts decimal to binary and find the length of particular number in binary system.
      * @param d double digit. Should contain already rounded number.
      * @return integer number equals the length of decimal d in binary system.
      */

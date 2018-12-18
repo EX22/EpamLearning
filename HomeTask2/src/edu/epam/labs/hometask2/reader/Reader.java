@@ -1,11 +1,13 @@
 package edu.epam.labs.hometask2.reader;
 
+import edu.epam.labs.hometask2.exception.ReaderException;
+
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Read file from given resource.
+ * Reads file from given resource.
  */
 public class Reader {
 
@@ -15,9 +17,12 @@ public class Reader {
      * @param inputStream input stream to read data from.
      * @return array of strings.
      */
-    public String[] read(InputStream inputStream) {
+    public String[] read(InputStream inputStream) throws ReaderException {
         String[] arrayOfStrings = null;
         try {
+            if (inputStream == null){
+                throw new ReaderException("Input stream is null.");
+            }
             BufferedReader fileReader = new BufferedReader(new InputStreamReader(inputStream));
             String line = fileReader.readLine();
             if (line != null) {

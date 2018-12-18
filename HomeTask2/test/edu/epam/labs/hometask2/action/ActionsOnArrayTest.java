@@ -1,4 +1,4 @@
-package edu.epam.labs.hometask2.test;
+package edu.epam.labs.hometask2.action;
 
 import edu.epam.labs.hometask2.action.ActionsOnArray;
 import org.testng.annotations.Test;

@@ -6,11 +6,11 @@ import java.util.regex.Pattern;
 
 
 /**
- * Check incoming data, skip not valid elements.
+ * Checks incoming data, skip not valid elements.
  */
 public class DataValidator {
     /**
-     *
+     * Having gotten array of strings checks the elements if they are valid or not.
      * @param strings array of strings. Should contain elements which might be converted into double. For example "7.0".
      * @return array of doubles. Not valid strings from input are ignored.
      * @throws ValidationException if strings is null or strings.length == 0 or there is no valid elements in strings.
