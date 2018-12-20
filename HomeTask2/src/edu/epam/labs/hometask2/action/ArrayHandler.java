@@ -1,12 +1,12 @@
 package edu.epam.labs.hometask2.action;
 
 /**
- * Makes actions on array such as swapping elements, getting to square or rounds elements
+ * Makes actions on array such as swapping elements, getting to square or rounds elements.
  */
-public class ActionsOnArray {
+public class ArrayHandler {
 
     /**
-     * Having gotten array of doubles swap element with the next one if the next one's element's length in binary
+     * Having received array of doubles swap element with the next one if the next one's element's length in binary
      * system longer and square if not.
      *
      * @param arr array of doubles.

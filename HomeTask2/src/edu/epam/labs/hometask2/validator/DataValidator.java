@@ -1,6 +1,7 @@
 package edu.epam.labs.hometask2.validator;
 
 import edu.epam.labs.hometask2.exception.ValidationException;
+
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
@@ -10,15 +11,16 @@ import java.util.regex.Pattern;
  */
 public class DataValidator {
     /**
-     * Having gotten array of strings checks the elements if they are valid or not.
+     * Having received array of strings checks the elements if they are valid or not.
+     *
      * @param strings array of strings. Should contain elements which might be converted into double. For example "7.0".
      * @return array of doubles. Not valid strings from input are ignored.
      * @throws ValidationException if strings is null or strings.length == 0 or there is no valid elements in strings.
      */
-    public double[] validateArray(String[] strings) throws ValidationException{
-        if (strings == null){
+    public double[] validateArray(String[] strings) throws ValidationException {
+        if (strings == null) {
             throw new ValidationException("Strings is null");
-        } else if (strings.length == 0){
+        } else if (strings.length == 0) {
             throw new ValidationException("Array's length is 0");
         }
         int j = 0;
@@ -29,7 +31,7 @@ public class DataValidator {
                 j++;
             }
         }
-        if (j == 0){
+        if (j == 0) {
             throw new ValidationException("There is no valid elements in array.");
         }
         return Arrays.copyOfRange(validArr, 0, j);

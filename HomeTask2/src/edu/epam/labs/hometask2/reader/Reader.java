@@ -20,7 +20,7 @@ public class Reader {
     public String[] read(InputStream inputStream) throws ReaderException {
         String[] arrayOfStrings = null;
         try {
-            if (inputStream == null){
+            if (inputStream == null) {
                 throw new ReaderException("Input stream is null.");
             }
             BufferedReader fileReader = new BufferedReader(new InputStreamReader(inputStream));

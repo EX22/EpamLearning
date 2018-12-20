@@ -7,6 +7,10 @@ import static org.testng.Assert.*;
 
 public class DataValidatorTest {
 
+    /**
+     * Checks if DataValidator's validateArray method properly validating data from received array,
+     * validates only those elements which might be converted into double.
+     */
     @Test
     public void testValidateArray() {
         try {

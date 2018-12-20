@@ -8,10 +8,10 @@ import java.util.Arrays;
 public class BinarySearch {
 
     /**
-     * Sorts gotten array and implements binary search of particular element.
+     * Sorts received array and implements binary search of particular element.
      *
      * @param arr array of doubles.
-     * @param x   the element which is needed to be find.
+     * @param x   the element which is needed to be found.
      * @return the index of demanded element in array.
      */
     public int find(double[] arr, double x) {

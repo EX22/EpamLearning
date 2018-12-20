@@ -1,6 +1,6 @@
 package edu.epam.labs.hometask2.main;
 
-import edu.epam.labs.hometask2.action.ActionsOnArray;
+import edu.epam.labs.hometask2.action.ArrayHandler;
 import edu.epam.labs.hometask2.action.BinarySearch;
 import edu.epam.labs.hometask2.exception.ReaderException;
 import edu.epam.labs.hometask2.exception.ValidationException;
@@ -14,53 +14,41 @@ import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Runs manipulation on array methods.
+ */
 public class Main {
 
     private static Logger LOG = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
 
-        double x = 0;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         Reader readFile = new Reader();
         DataValidator dataValidator = new DataValidator();
+
         try {
+            // Read and validate array of doubles from the file.
             InputStream in = Main.class.getResourceAsStream(
                     "/edu/epam/labs/hometask2/resources/SourceDataForArray");
             double[] array = dataValidator.validateArray(readFile.read(in));
 
-            if (args.length > 0) {
-                try {
-                    x = Double.parseDouble(args[0]);
-                } catch (NumberFormatException e) {
-                    LOG.log(Level.WARNING, "Argument " + args[0] + " must be a double.", e);
-                }
-            }
-
+            // Running binary search in array. Searched element passing into method as a constant value.
             BinarySearch binarySearch = new BinarySearch();
-            int elemIndex = binarySearch.find(array, x);
+            int elemIndex = binarySearch.find(array, 7);
             if (elemIndex != -1) {
-                System.out.println("Requested element " + x + " on the position :" + elemIndex);
+                System.out.println("Requested element 7.0 on the position :" + elemIndex);
             } else {
                 System.out.println("Requested element is not found.");
             }
 
-            ActionsOnArray actionsOnArray = new ActionsOnArray();
-            actionsOnArray.round(array);
+            // Running method round on array.
+            ArrayHandler arrayHandler = new ArrayHandler();
+            arrayHandler.round(array);
 
-            for (double d : array) {
-                System.out.println(d);
-            }
+            // Running method swapOrSquare on array.
+            arrayHandler.swapOrSquare(array);
 
-            actionsOnArray.swapOrSquare(array);
-
-            System.out.println("Swapped or Squared");
-
-
-            for (double d : array) {
-                System.out.println(d);
-            }
 
         } catch (ValidationException e) {
             LOG.log(Level.SEVERE, "Input data validation error: ", e);
