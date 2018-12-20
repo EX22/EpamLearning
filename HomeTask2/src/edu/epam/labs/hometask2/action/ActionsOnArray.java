@@ -8,6 +8,7 @@ public class ActionsOnArray {
     /**
      * Having gotten array of doubles swap element with the next one if the next one's element's length in binary
      * system longer and square if not.
+     *
      * @param arr array of doubles.
      */
     public void swapOrSquare(double[] arr) {
@@ -25,6 +26,7 @@ public class ActionsOnArray {
 
     /**
      * Converts decimal to binary and find the length of particular number in binary system.
+     *
      * @param d double digit. Should contain already rounded number.
      * @return integer number equals the length of decimal d in binary system.
      */
@@ -44,6 +46,7 @@ public class ActionsOnArray {
 
     /**
      * Round array's elements.
+     *
      * @param arr array of doubles.
      */
     public void round(double[] arr) {

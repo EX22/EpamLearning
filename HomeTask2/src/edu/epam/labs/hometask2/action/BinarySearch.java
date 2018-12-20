@@ -9,9 +9,10 @@ public class BinarySearch {
 
     /**
      * Sorts gotten array and implements binary search of particular element.
+     *
      * @param arr array of doubles.
-     * @param x the element which is needed to be find.
-     * @return index of demanded element in array.
+     * @param x   the element which is needed to be find.
+     * @return the index of demanded element in array.
      */
     public int find(double[] arr, double x) {
         Arrays.sort(arr);

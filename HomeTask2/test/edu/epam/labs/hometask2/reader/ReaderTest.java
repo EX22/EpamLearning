@@ -4,7 +4,9 @@ import edu.epam.labs.hometask2.exception.ReaderException;
 import edu.epam.labs.hometask2.main.Main;
 import edu.epam.labs.hometask2.exception.ValidationException;
 import edu.epam.labs.hometask2.validator.DataValidator;
+
 import java.io.InputStream;
+
 import static org.testng.Assert.*;
 
 public class ReaderTest {
