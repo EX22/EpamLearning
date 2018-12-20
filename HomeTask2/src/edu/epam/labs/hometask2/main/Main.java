@@ -21,6 +21,17 @@ public class Main {
 
     private static Logger LOG = Logger.getLogger(Main.class.getName());
 
+    public static void outputArray(String message, double[] array) {
+
+        StringBuilder sb = new StringBuilder(message + " ");
+        for (int i = 0; i < array.length; i++) {
+            sb.append((array[i]));
+            if (i < array.length - 1)
+                sb.append(", ");
+        }
+        LOG.log(Level.INFO, sb.toString());
+    }
+
     public static void main(String[] args) {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -33,21 +44,28 @@ public class Main {
                     "/edu/epam/labs/hometask2/resources/SourceDataForArray");
             double[] array = dataValidator.validateArray(readFile.read(in));
 
+            outputArray("Read array from file", array);
+
             // Running binary search in array. Searched element passing into method as a constant value.
             BinarySearch binarySearch = new BinarySearch();
             int elemIndex = binarySearch.find(array, 7);
+            outputArray("Sorted array after binary search", array);
             if (elemIndex != -1) {
-                System.out.println("Requested element 7.0 on the position :" + elemIndex);
+                LOG.log(Level.INFO, "Requested element 7.0 on the position :" + elemIndex);
             } else {
-                System.out.println("Requested element is not found.");
+                LOG.log(Level.INFO, "Requested element is not found.");
             }
 
             // Running method round on array.
             ArrayHandler arrayHandler = new ArrayHandler();
             arrayHandler.round(array);
 
+            outputArray("Rounded", array);
+
             // Running method swapOrSquare on array.
             arrayHandler.swapOrSquare(array);
+
+            outputArray("Swapped and squared", array);
 
 
         } catch (ValidationException e) {

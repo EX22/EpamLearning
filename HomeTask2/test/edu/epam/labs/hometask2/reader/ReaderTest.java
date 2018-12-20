@@ -27,7 +27,7 @@ public class ReaderTest {
         InputStream in = Main.class.getResourceAsStream(
                 "/edu/epam/labs/hometask2/resources/SourceDataForArray");
         double[] array = dataValidator.validateArray(readFile.read(in));
-        assertEquals(array[1], 7.0);
+        assertEquals(array[1], 8.0);
 
     }
 
