@@ -16,6 +16,7 @@ public class Reader {
     /**
      * @param inputStream input stream to read data from.
      * @return array of strings.
+     * @throws ReaderException - in case if can not read from input stream for some reason
      */
     public String[] read(InputStream inputStream) throws ReaderException {
         String[] arrayOfStrings = null;
